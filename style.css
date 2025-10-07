@@ -1,0 +1,87 @@
+:root {
+  color-scheme: dark light;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #111;
+  color: #f0f0f0;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.game-container {
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: linear-gradient(145deg, #1d1d1d, #111111);
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5), -10px -10px 30px rgba(60, 60, 60, 0.05);
+  max-width: 480px;
+  width: 100%;
+}
+
+h1 {
+  margin-top: 0;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+canvas {
+  display: block;
+  margin: 0 auto 1rem;
+  border-radius: 0.5rem;
+  background-color: #000;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.hud {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.score {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+#restart {
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  border: none;
+  background: #19a974;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+#restart:hover,
+#restart:focus {
+  background: #1fd08d;
+  transform: translateY(-1px);
+}
+
+#restart:active {
+  transform: translateY(1px);
+}
+
+.instructions {
+  font-size: 0.9rem;
+  color: #bfbfbf;
+}
+
+@media (max-width: 480px) {
+  .game-container {
+    border-radius: 0;
+    min-height: 100vh;
+    justify-content: center;
+  }
+
+  canvas {
+    width: 90vw;
+    height: 90vw;
+  }
+}
